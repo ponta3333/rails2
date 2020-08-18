@@ -21,17 +21,7 @@
 							<td><%= link_to "#{@book2.title}", book_path(@book2) %></td>
 							<td><%= @book2.body %></td>
 							<td>
-							<% if @book2.favorited_by?(current_user) %>
-							  <%= link_to book_favorite_path(@book2, @user), method: :delete do %>
-							    <i class="fa fa-heart" aria-hidden="true" style="color: red;"></i>
-							    <%= @book2.favorites.count %>
-							  <% end %>
-							<% else %>
-							  <%= link_to book_favorites_path(@book2), method: :post do %>
-							    <i class="fa fa-heart" aria-hidden="true" style="color: grey;"></i>
-							    <%= @book2.favorites.count %>
-							 <% end %>
-							<% end %>
+								<%= render 'favorites/favorite', user: @user, book: @book2 %>
 							</td>
 							<td>
 								<i class="fa fa-comment"></i>
