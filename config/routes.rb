@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   root 'home#top'
+  
   get 'home/about' => 'home#about'
   get 'search' => 'search#search'
   devise_for :users, controllers: {registrations: 'users/registrations', sessions: 'users/sessions'}
