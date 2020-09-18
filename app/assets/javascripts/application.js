@@ -17,10 +17,7 @@
 //= require bootstrap-sprockets
 //= require_tree .
 //= require jquery.jpostal
-window.onload = function() {
-  const loader = document.getElementById('loading');
-  loader.classList.add('loaded');
-}
+
 $(document).ready(function(){
 	$('.jquery').on('click', function(){
 		$(this).css('color', 'red');
